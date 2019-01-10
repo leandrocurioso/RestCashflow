@@ -1,0 +1,40 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestCashflowLibrary", "RestCashflowLibrary\RestCashflowLibrary.csproj", "{CD0A0B72-19AD-49B2-807F-EA44529A9080}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9763846C-E15C-4758-AD6B-63A19653DC72}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+		.gitignore = .gitignore
+		.travis.yml = .travis.yml
+		db_cashflow.sql = db_cashflow.sql
+		Dockerfile = Dockerfile
+		docker-compose.yml = docker-compose.yml
+		.dockerignore = .dockerignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestCashflowTests", "RestCashflowTests\RestCashflowTests.csproj", "{8FCD64F5-8B4D-4984-A0FC-3485CEE1BC64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestCashflowWebApi", "RestCashflowWebApi\RestCashflowWebApi.csproj", "{3C443846-C0C7-48D8-ABCC-DAB94AEEA518}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD0A0B72-19AD-49B2-807F-EA44529A9080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD0A0B72-19AD-49B2-807F-EA44529A9080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD0A0B72-19AD-49B2-807F-EA44529A9080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD0A0B72-19AD-49B2-807F-EA44529A9080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FCD64F5-8B4D-4984-A0FC-3485CEE1BC64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCD64F5-8B4D-4984-A0FC-3485CEE1BC64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCD64F5-8B4D-4984-A0FC-3485CEE1BC64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCD64F5-8B4D-4984-A0FC-3485CEE1BC64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C443846-C0C7-48D8-ABCC-DAB94AEEA518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C443846-C0C7-48D8-ABCC-DAB94AEEA518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C443846-C0C7-48D8-ABCC-DAB94AEEA518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C443846-C0C7-48D8-ABCC-DAB94AEEA518}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
