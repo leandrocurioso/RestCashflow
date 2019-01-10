@@ -1,11 +1,11 @@
-﻿version: '3'
+version: '3'
 services:
   mariadb:
     image: mariadb:10.3
     environment:
       MYSQL_ROOT_PASSWORD: 123456
       MYSQL_DATABASE: db_cashflow
-      MYSQL_ROOT_HOST: 'mariadb'
+      MYSQL_ROOT_HOST: '%'
     restart: on-failure
     volumes:
      - ${PWD}/mariadb:/var/lib/mysql    
@@ -26,6 +26,12 @@ services:
     image: restcashflowwebapi
     build:
       context: .
+    restart: on-failure
+    healthcheck:
+        test: 'curl --silent --fail http://localhost:3000/swagger || exit 1'
+        interval: 5s
+        timeout: 10s
+        retries: 5
     ports:
       - '3000:80'
     depends_on:
@@ -34,5 +40,7 @@ services:
     links:
         - mariadb
         - rabbitmq
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Production 
 volumes:
     rabbitmq_data:
