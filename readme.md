@@ -1,5 +1,13 @@
 # RestCashflow API
 
+**Development branch status**
+<br/>
+[![Build Status](https://travis-ci.org/leandrocurioso/RestCashflow.svg?branch=development)](https://travis-ci.org/leandrocurioso/RestCashflow)
+<br/>
+**Production branch status**
+<br/>
+[![Build Status](https://travis-ci.org/leandrocurioso/RestCashflow.svg?branch=master)](https://travis-ci.org/leandrocurioso/RestCashflow)
+<br/>
 This project consists of a web api to register financial entries queuing with RabbitMQ and MariaDB for persistance.
 
 ## Run
@@ -7,6 +15,11 @@ To run the whole project type in the terminal:
 ````
 docker-compose up --build
 ````
+
+Until the database is fully ready this message will keep appearing in the temrinal:
+*restcashflow_web_1 exited with code 139*
+
+Don`t worry! It will automatically keep retrying up until MariaDB is ready and then the web api will start successfully.
 
 ## Project Structrure
 Ddveloped with .NET Core 2.2 (C#)
