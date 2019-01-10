@@ -1,8 +1,9 @@
 ﻿# RestCashflow API
 
-**Status Development**
+**Status Development**<br/>
 [![Build Status](https://travis-ci.com/leandrocurioso/rest-cashflow.svg?branch=development)](https://travis-ci.com/leandrocurioso/rest-cashflow)
-**Status Production:**
+
+**Status Production:**<br/>
 [![Build Status](https://travis-ci.com/leandrocurioso/rest-cashflow.svg?branch=master)](https://travis-ci.com/leandrocurioso/rest-cashflow)
 
 This project consists of a web api to register financial entries queuing with RabbitMQ and MariaDB for persistance.
@@ -70,5 +71,6 @@ Change this as you like to adapt to your needs.
 ## Reference links
 RabbitMQ Docker Image
 https://github.com/bitnami/bitnami-docker-rabbitmq
+<br/>
 MariaDB Docker Image
 https://hub.docker.com/_/mariadb/
