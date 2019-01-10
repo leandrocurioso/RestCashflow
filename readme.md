@@ -1,10 +1,4 @@
-﻿# RestCashflow API
-
-**Status Development**<br/>
-[![Build Status](https://travis-ci.com/leandrocurioso/rest-cashflow.svg?branch=development)](https://travis-ci.com/leandrocurioso/rest-cashflow)
-
-**Status Production:**<br/>
-[![Build Status](https://travis-ci.com/leandrocurioso/rest-cashflow.svg?branch=master)](https://travis-ci.com/leandrocurioso/rest-cashflow)
+# RestCashflow API
 
 This project consists of a web api to register financial entries queuing with RabbitMQ and MariaDB for persistance.
 
