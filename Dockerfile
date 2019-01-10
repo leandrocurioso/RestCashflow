@@ -2,11 +2,9 @@
 
 WORKDIR /app
 
-EXPOSE 80/tcp
-
 COPY . ./
 RUN dotnet restore RestCashflowWebApi/*.csproj
-RUN dotnet publish RestCashflowWebApi/*.csproj -c Debug -o out
+RUN dotnet publish RestCashflowWebApi/*.csproj -c Release -o out
 
 FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
 WORKDIR /app

@@ -5,12 +5,10 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 123456
       MYSQL_DATABASE: db_cashflow
-      MYSQL_ROOT_HOST: '%'
+      MYSQL_ROOT_HOST: 'mariadb'
     restart: on-failure
     volumes:
-     - ${PWD}/mariadb:/var/lib/mysql
-    networks:
-        - default     
+     - ${PWD}/mariadb:/var/lib/mysql    
     ports:
       - '3306:3306'
   rabbitmq:
@@ -24,5 +22,17 @@ services:
       - '15672:15672'
     volumes:
         - 'rabbitmq_data:/bitnami' 
+  web:
+    image: restcashflowwebapi
+    build:
+      context: .
+    ports:
+      - '3000:80'
+    depends_on:
+        - mariadb
+        - rabbitmq
+    links:
+        - mariadb
+        - rabbitmq
 volumes:
-  rabbitmq_data:
+    rabbitmq_data:
