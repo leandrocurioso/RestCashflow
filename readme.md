@@ -1,10 +1,4 @@
-﻿# RestCashflow API
-
-**Status Development**<br/>
-[![Build Status](https://travis-ci.com/leandrocurioso/rest-cashflow.svg?branch=development)](https://travis-ci.com/leandrocurioso/rest-cashflow)
-
-**Status Production:**<br/>
-[![Build Status](https://travis-ci.com/leandrocurioso/rest-cashflow.svg?branch=master)](https://travis-ci.com/leandrocurioso/rest-cashflow)
+# RestCashflow API
 
 This project consists of a web api to register financial entries queuing with RabbitMQ and MariaDB for persistance.
 
@@ -13,6 +7,8 @@ To run the MariaDB and RabbitMQ  type in the terminal:
 ````
 docker-compose up
 ````
+
+**It`s mandatory that you run the docker-compose before running the project, because without MariaDB and RabbitMQ properly running the application will not run.**
 
 **DISCLAIMER:** I was not able to add the application into a container, I can build the image but I get an error from MariaDB while trying to initialize the container, because of that I removed from the docker compose file. It was taking me a lot of time to fix so I skipped that part.
 
