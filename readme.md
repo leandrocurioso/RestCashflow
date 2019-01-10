@@ -3,14 +3,10 @@
 This project consists of a web api to register financial entries queuing with RabbitMQ and MariaDB for persistance.
 
 ## Run
-To run the MariaDB and RabbitMQ  type in the terminal: 
+To run the whole project type in the terminal: 
 ````
-docker-compose up
+docker-compose up --build
 ````
-
-**It`s mandatory that you run the docker-compose before running the project, because without MariaDB and RabbitMQ properly running the application will not run.**
-
-**DISCLAIMER:** I was not able to add the application into a container, I can build the image but I get an error from MariaDB while trying to initialize the container, because of that I removed from the docker compose file. It was taking me a lot of time to fix so I skipped that part.
 
 ## Project Structrure
 Ddveloped with .NET Core 2.2 (C#)
@@ -23,17 +19,19 @@ There`re three assemblies in the whole project
 ## API Documentation
 The documentation is auto generated with XML comments provided by Swashbuckle.AspNetCore  library.  For more details: https://github.com/domaindrivendev/Swashbuckle.AspNetCore
 
-After the project is initialized hit the URL: **http://<host><port>:/swagger** to view the documentation of how to call the web api.
+After the project is initialized hit the URL: **http://localhost:3000/swagger** to view the documentation of how to call the web api.
 
 ## RabbitMQ User Interface
-The user interface of RabbitMQ can be accessed in: **http://<host><port>:15672**
+The user interface of RabbitMQ can be accessed in: **http://localhost:15672**
 
 **Username:** user
 **Password:** bitnami
 
 ## MariaDB Credentials
 **User:** root
+<br/>
 **Password:** 123456
+<br/>
 **Database:** db_cashflow
 
 There`s a SQL dump file in the solution root called: **db_cashflow.sql**
