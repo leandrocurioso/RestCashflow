@@ -1,0 +1,9 @@
+﻿language: csharp
+dist: xenial
+mono: none
+dotnet: 2.2.101
+install:
+    - dotnet restore
+script:
+    - dotnet build
+    - dotnet test RestCashflow.Tests/RestCashflow.Tests.csproj
